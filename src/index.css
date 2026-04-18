@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.app {
+  transition: all 0.3s ease-in-out;
+}
+
+/* LIGHT MODE */
+.app.light {
+  background: #f9fafb;
+  color: #0f172a;
+}
+
+/* DARK MODE */
+.app.dark {
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+/* .app.light .project-card {
+  background: rgba(0,0,0,0.05);
+  color: #0f172a;
+}
+
+.app.dark .project-card {
+  background: rgba(255,255,255,0.05);
+  color: #f1f5f9;
+}  */
+
+.app.light .modal-content  {
+  background: white;
+  color: #0f172a;
+}
+
+.app.light .modal-content  a{ 
+  background: #0f172a;
+  color: #38bdf8;
+}
+
+.app.dark .modal-content {
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+.app.light {
+  background: url("./assets/images/project8.jpg") no-repeat center center/cover;
+}
+
+.app.dark {
+  background: url("./assets/images/project10.jpg") no-repeat center center/cover;
+}
+/* background-image: url("../assets/images/project8.jpg");
+  background-size: cover;
+  background-position: center; */
+  .progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  z-index: 2000;
+  transition: width 0.1s ease;
+}
+
+.app.light .progress-bar {
+  background: linear-gradient(90deg, #0ea5e9, #6366f1);
+}

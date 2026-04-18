@@ -1,0 +1,145 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+/* Hamburger */
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #38bdf8;
+}
+/* Hide menu by default (mobile) */
+.menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #0f172a;
+  flex-direction: column;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* Show when open */
+.menu.open {
+  display: flex;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    max-width: 50px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Links */
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 0.3rem 0;
+}
+
+/* Animated underline */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a.active {
+  color: #38bdf8;
+}
+
+.menu a.active::after {
+  width: 100%;
+}
+
+.theme-toggle {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #38bdf8;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+    background: #0ea5e9;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    gap: 1.5rem;
+    background: transparent;
+    margin-left: auto;
+  }
+}
