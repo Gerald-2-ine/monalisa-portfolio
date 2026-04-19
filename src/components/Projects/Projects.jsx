@@ -38,11 +38,11 @@ const Projects = () => {
     },
     {
       title: "Project 2",
-      description: "Dynamic frontend project",
-      tech: "JavaScript, API",
+      description: "Personal Portfolio Website",
+      tech: "React",
       image: img2,
-      github: "#",
-      live: "#",
+      github: "https://github.com/Gerald-2-ine/monalisa-portfolio",
+      live: "https://monalisa-portfolio-rouge.vercel.app/",
     },
     {
       title: "Project 3",
